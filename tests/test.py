@@ -2,6 +2,8 @@ import json
 import joblib
 import numpy as np
 import os
+import warnings
+warnings.filterwarnings('ignore', category=UserWarning, message='.*does not have valid feature names.*')
 
 # Correct path to the model inside the 'models' folder
 model_path = 'models/rf_model'
