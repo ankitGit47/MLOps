@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 # Correct path to the model inside the 'models' folder
-model_path = 'models/rfmodel'
+model_path = 'models/rf_model'
 
 # Load the pre-trained Random Forest model
 rf_model = joblib.load(model_path)
