@@ -28,9 +28,7 @@ jobs:
           pip install flake8
 
       - name: Run linter
-        env:
-            PYTHONPATH: ${{ github.workspace }}
-        run: flake8 CC_fraud_detects.py
+        run: flake8 src/CC_fraud_detect.py
 
   test:
     name: Run Tests
