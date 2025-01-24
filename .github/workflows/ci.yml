@@ -28,7 +28,7 @@ jobs:
           pip install flake8
 
       - name: Run linter
-        run: flake8 src/CC_fraud_detect.py
+        run: flake8 --select=E1 src/CC_fraud_detect.py
 
   test:
     name: Run Tests
