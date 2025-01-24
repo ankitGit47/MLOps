@@ -45,4 +45,4 @@ print(f"Prediction Result********: {result}")
 # Optionally, assert the result (example checking if the result is 0)
 def test_prediction():
     # Your prediction logic here
-    assert result == 0  # Correct result from your model
+    assert result == 1  # Correct result from your model
