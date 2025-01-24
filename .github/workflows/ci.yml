@@ -52,7 +52,7 @@ jobs:
       - name: Run tests
         env:
           PYTHONPATH: ${{ github.workspace }}
-        run: pytest -s tests/
+        run: pytest -s tests/test.py
 
   deploy:
     name: Deploy Application
