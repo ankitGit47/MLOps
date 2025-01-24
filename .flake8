@@ -1,0 +1,8 @@
+[flake8]
+select = E1,E2
+ignore =
+max-line-length = 88
+exclude = 
+    .git,
+    __pycache__,
+    venv/
