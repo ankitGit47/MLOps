@@ -38,7 +38,7 @@ input_json = '''
 result = predict_from_json(input_json)
 
 # Print the prediction result
-print(f"Prediction Result: {result}")
+print(f"Prediction Result********: {result}")
 
 # Optionally, assert the result (example checking if the result is 0)
 assert result == 0, f"Expected 0 but got {result}"
