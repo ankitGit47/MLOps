@@ -43,4 +43,6 @@ result = predict_from_json(input_json)
 print(f"Prediction Result********: {result}")
 
 # Optionally, assert the result (example checking if the result is 0)
-assert result == 0, f"Expected 0 but got {result}"
+def test_prediction():
+    # Your prediction logic here
+    assert result == 0  # Correct result from your model
