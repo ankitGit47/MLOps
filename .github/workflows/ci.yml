@@ -75,3 +75,8 @@ jobs:
       - name: Deploy Code to EC2
         run: |
           scp -r . ubuntu@18.212.67.4:/home/ubuntu
+          
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
