@@ -72,9 +72,13 @@ jobs:
       - name: Add SSH Known Hosts
         run: ssh-keyscan -H 184.72.132.36 >> ~/.ssh/known_hosts
 
+      - name: Clean Target Directory on EC2
+        run: |
+          ssh -i ~/.ssh/id_rsa ubuntu@184.72.132.36 "rm -rf /home/ubuntu/*"
+          
       - name: Deploy Code to EC2
         run: |
-          scp -rf . ubuntu@184.72.132.36:/home/ubuntu
+          scp -r . ubuntu@184.72.132.36:/home/ubuntu
           
       - name: Set up Python
         uses: actions/setup-python@v4
