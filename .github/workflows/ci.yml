@@ -1,4 +1,4 @@
-name: CI /CD for machine Learning 
+name: CI/CD for Machine Learning
 
 on:
   push:
@@ -63,5 +63,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy
-        run: echo "Deploying application..." # Replace this with actual deployment logic
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          cp C:\Users\Dhruv\Downloads\key1.pem ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Add SSH Known Hosts
+        run: ssh-keyscan -H 18.212.67.4 >> ~/.ssh/known_hosts
+
+      - name: Deploy Code to EC2
+        run: |
+          scp -r . ubuntu@18.212.67.4:/home/ubuntu
