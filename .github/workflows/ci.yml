@@ -70,7 +70,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
 
       - name: Add SSH Known Hosts
-        run: ssh-keyscan -H 18.212.67.4 >> ~/.ssh/known_hosts
+        run: ssh-keyscan -H 184.72.132.36 >> ~/.ssh/known_hosts
 
       - name: Deploy Code to EC2
         run: |
