@@ -74,7 +74,7 @@ jobs:
 
       - name: Deploy Code to EC2
         run: |
-          scp -r . ubuntu@18.212.67.4:/home/ubuntu
+          scp -r . ubuntu@184.72.132.36:/home/ubuntu
           
       - name: Install dependencies
         run: |
