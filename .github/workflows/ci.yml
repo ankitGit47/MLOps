@@ -74,7 +74,7 @@ jobs:
 
       - name: Clean Target Directory on EC2
         run: |
-          ssh -i ~/.ssh/id_rsa ubuntu@184.72.132.36 "rm -rf /home/ubuntu/*"
+          ssh -i ~/.ssh/id_rsa ubuntu@184.72.132.36 "rm -rf /home/ubuntu/{*,.git}"
           
       - name: Deploy Code to EC2
         run: |
